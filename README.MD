@@ -1,0 +1,1 @@
+Solutions to the Exercises that are part of the LinkedIn Rust Essential Training Course
