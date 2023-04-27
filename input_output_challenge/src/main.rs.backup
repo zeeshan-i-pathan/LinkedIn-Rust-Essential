@@ -1,0 +1,16 @@
+use std::{env, fs};
+
+fn main() {
+    if env::args().len() != 3 {
+        return println!("Two arguments are needed to run the check");
+    }
+
+    let content = fs::read_to_string(env::args().nth(1).unwrap()).unwrap();
+    let content = content.split("\n");
+    for part in content {
+        if part == env::args().nth(2).unwrap() {
+            return println!("Match Found");
+        }
+    }
+    println!("Match Not Found");
+}
